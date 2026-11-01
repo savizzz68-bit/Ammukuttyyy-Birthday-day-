@@ -37,68 +37,6 @@ footer{text-align:center;padding:25px;color:#a66b82;font:13px Arial,sans-serif}
 .heart{display:inline-block;animation:pulse 1.4s infinite}@keyframes pulse{50%{transform:scale(1.22)}}
 @media(max-width:600px){.grid{grid-template-columns:1fr}.grid img{height:auto;max-height:480px}.caption{font-size:17px}.letter{padding:22px 18px}}
 </style>
- 
-/* Beautiful Birthday Music Player */
-.music-player {
-  position: fixed;
-  bottom: 22px;
-  right: 15px;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 15px;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #ff5b91, #b83280);
-  color: white;
-  box-shadow: 0 8px 25px rgba(255, 65, 130, 0.4);
-  border: 1px solid rgba(255,255,255,.4);
-}
-
-.music-button {
-  width: 43px;
-  height: 43px;
-  border: 2px solid white;
-  border-radius: 50%;
-  background: white;
-  color: #e84383;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.music-info {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.music-info strong {
-  font-size: 12px;
-}
-
-.music-info small {
-  font-size: 10px;
-}
-
-.music-disc {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: #fff0f5;
-  color: #e84383;
-  display: grid;
-  place-items: center;
-  font-size: 23px;
-}
-
-.music-disc.playing {
-  animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
- 
 </head>
 <body>
  
@@ -117,32 +55,7 @@ footer{text-align:center;padding:25px;color:#a66b82;font:13px Arial,sans-serif}
 <audio id="birthdayMusic" loop>
   <source src="birthday.mp3" type="audio/mpeg">
 </audio>
- 
-const music = document.getElementById("birthdayMusic");
-const musicBtn = document.getElementById("musicBtn");
-const musicIcon = document.getElementById("musicIcon");
-const musicDisc = document.getElementById("musicDisc");
-const musicStatus = document.getElementById("musicStatus");
 
-musicBtn.addEventListener("click", async () => {
-  if (music.paused) {
-    try {
-      await music.play();
-      musicIcon.textContent = "Ⅱ";
-      musicStatus.textContent = "Playing for you ❤️";
-      musicDisc.classList.add("playing");
-    } catch (error) {
-      musicStatus.textContent = "Please try again 🎵";
-    }
-  } else {
-    music.pause();
-    musicIcon.textContent = "▶";
-    musicStatus.textContent = "Music paused";
-    musicDisc.classList.remove("playing");
-  }
-});
- 
- 
 
 <button onclick="document.getElementById('birthdayMusic').play()">
     🎵 Play Birthday Music
