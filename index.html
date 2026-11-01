@@ -39,6 +39,23 @@ footer{text-align:center;padding:25px;color:#a66b82;font:13px Arial,sans-serif}
 </style>
 </head>
 <body>
+ 
+<!-- Birthday Music Player -->
+<div class="music-player">
+  <button id="musicBtn" class="music-button">
+    <span id="musicIcon">▶</span>
+  </button>
+  <div class="music-info">
+    <strong>Birthday Melodies 🎂</strong>
+    <small id="musicStatus">Play our special song ❤️</small>
+  </div>
+  <div class="music-disc" id="musicDisc">♫</div>
+</div>
+
+<audio id="birthdayMusic" loop>
+  <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+ 
 <header class="hero">
  <div class="hero-inner">
   <div class="eyebrow">A little surprise, made with love</div>
