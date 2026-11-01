@@ -39,13 +39,15 @@ footer{text-align:center;padding:25px;color:#a66b82;font:13px Arial,sans-serif}
 </style>
 </head>
 <body>
- <audio id="birthdayMusic" loop>
-    <source src="birthday.mp3" type="audio/mpeg">
-</audio>
-
-<button onclick="document.getElementById('birthdayMusic').play()">
+ <div class="music-player">
+  <button id="musicToggle" onclick="toggleMusic()">
     🎵 Play Birthday Music
-</button>
+  </button>
+</div>
+
+<audio id="birthdayMusic" loop>
+  <source src="birthday.mp3" type="audio/mpeg">
+</audio>
   
 <header class="hero">
  <div class="hero-inner">
