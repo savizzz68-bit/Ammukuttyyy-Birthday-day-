@@ -39,6 +39,14 @@ footer{text-align:center;padding:25px;color:#a66b82;font:13px Arial,sans-serif}
 </style>
 </head>
 <body>
+ <audio id="birthdayMusic" loop>
+    <source src="birthday.mp3" type="audio/mpeg">
+ </audio>
+ <button class="primary"
+onclick="
+document.getElementById('birthdayMusic').play();
+document.getElementById('little-you').scrollIntoView({behavior:'smooth'});
+">
 <header class="hero">
  <div class="hero-inner">
   <div class="eyebrow">A little surprise, made with love</div>
@@ -103,12 +111,5 @@ footer{text-align:center;padding:25px;color:#a66b82;font:13px Arial,sans-serif}
 </div>
 </main>
 <footer>Every picture holds a memory. Every memory holds a little love. 💗</footer>
-<div style="text-align:center; padding:20px;">
-  <p>🎵 Birthday Music 🎵</p>
-  <audio controls loop>
-    <source src="birthday.mp3" type="audio/mpeg">
-  </audio>
-</div>
-
 </body>
 </html>
